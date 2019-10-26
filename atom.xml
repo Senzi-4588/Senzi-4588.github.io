@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jpjp123.top/"/>
-  <updated>2019-10-25T16:05:55.100Z</updated>
+  <updated>2019-10-21T12:42:48.000Z</updated>
   <id>http://www.jpjp123.top/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RAID</title>
+    <link href="http://www.jpjp123.top/2019/10/26/raid/"/>
+    <id>http://www.jpjp123.top/2019/10/26/raid/</id>
+    <published>2019-10-26T15:34:39.277Z</published>
+    <updated>2019-10-21T12:42:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;磁盘阵列RAID&quot;&gt;&lt;a href=&quot;#磁盘阵列RAID&quot; class=&quot;headerlink&quot; title=&quot;磁盘阵列RAID&quot;&gt;&lt;/a&gt;磁盘阵列RAID&lt;/h3&gt;&lt;p&gt;RAID：磁盘冗余阵列（Redundant Array of Independent
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Redis</title>
+    <link href="http://www.jpjp123.top/2019/10/26/redis/"/>
+    <id>http://www.jpjp123.top/2019/10/26/redis/</id>
+    <published>2019-10-26T15:27:08.247Z</published>
+    <updated>2019-09-10T08:50:17.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;redis&quot;&gt;&lt;a href=&quot;#redis&quot; class=&quot;headerlink&quot; title=&quot;redis&quot;&gt;&lt;/a&gt;redis&lt;/h2&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rsync</title>
+    <link href="http://www.jpjp123.top/2019/10/26/rsync/"/>
+    <id>http://www.jpjp123.top/2019/10/26/rsync/</id>
+    <published>2019-10-26T15:24:31.573Z</published>
+    <updated>2019-10-25T07:18:57.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;环境&lt;br&gt;操作系统：CentOS
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -53,29 +122,6 @@
         
         
           &lt;h1 id=&quot;HTTP状态码列表&quot;&gt;&lt;a href=&quot;#HTTP状态码列表&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>rsync</title>
-    <link href="http://www.jpjp123.top/2019/10/25/rsync/"/>
-    <id>http://www.jpjp123.top/2019/10/25/rsync/</id>
-    <published>2019-10-25T08:45:55.968Z</published>
-    <updated>2019-10-25T07:18:57.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;环境&lt;br&gt;操作系统：CentOS
         
       
     
