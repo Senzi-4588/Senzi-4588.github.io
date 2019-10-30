@@ -1,201 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<!-- Head tag -->
+<html>
 <head>
+  <meta charset="utf-8">
+  
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <!--Description-->
-
-    
-
-    
-        <meta name="description" content="环境操作系统：CentOS 7u3源服务器：192.168.179.128目标服务器：192.168.179.129目的：把目标服务器上/home_test目录实时同步到源服务器的/home_test下注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容
-192.168.179.128(源"/>
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="Jian"/>
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Rsync"/>
-    
-
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="环境操作系统：CentOS 7u3源服务器：192.168.179.128目标服务器：192.168.179.129目的：把目标服务器上/home_test目录实时同步到源服务器的/home_test下注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容
-192.168.179.128(源"/>
-    
-
-    <!--Open Graph Site Name-->
-        <meta property="og:site_name" content="Jian Blog"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article"/>
-    
-
-    <!--Page Cover-->
-    
-    
-        <meta property="og:image" content="http://www.jpjp123.tophttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
-    
-
-        <meta name="twitter:card" content="summary_large_image"/>
-
-    
-
-    
-        <meta name="twitter:image" content="http://www.jpjp123.tophttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
-    
-
-    <!-- Title -->
-    
-    <title>Rsync - Jian Blog</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
-
-    <!-- Google Analytics -->
-    
-
-
-    <!-- favicon -->
-    
-
+  
+  <title>Rsync | Jian Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="环境操作系统：CentOS 7u3源服务器：192.168.179.128目标服务器：192.168.179.129目的：把目标服务器上&#x2F;home_test目录实时同步到源服务器的&#x2F;home_test下注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容 192.168.179.128(源服务器)一、 安装rsyncrhel7:yum install rsyncsystemctl sta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rsync">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.jpjp123.top&#x2F;2019&#x2F;10&#x2F;26&#x2F;rsync&#x2F;index.html">
+<meta property="og:site_name" content="Jian Blog">
+<meta property="og:description" content="环境操作系统：CentOS 7u3源服务器：192.168.179.128目标服务器：192.168.179.129目的：把目标服务器上&#x2F;home_test目录实时同步到源服务器的&#x2F;home_test下注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容 192.168.179.128(源服务器)一、 安装rsyncrhel7:yum install rsyncsystemctl sta">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-25T07:18:57.000Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Jian Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
-
 <body>
-
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Configurable Title</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">
-                            
-                                Home
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/tags">
-                            
-                                Tags
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/categories">
-                            
-                                Categories
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://github.com/wujianpengg/wujianpengg.github.io" target="_blank" rel="noopener">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jian Blog</a>
+      </h1>
+      
     </div>
-    <!-- /.container -->
-</nav>
-
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
-
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>Rsync</h1>
-                    
-                    <span class="meta">
-                        <!-- Date and Author -->
-                        
-                        
-                            2019-10-26
-                        
-                    </span>
-                </div>
-            </div>
-        </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.jpjp123.top"></form>
+      </div>
     </div>
+  </div>
 </header>
+      <div class="outer">
+        <section id="main"><article id="post-Rsync" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/26/rsync/" class="article-date">
+  <time datetime="2019-10-26T15:24:31.573Z" itemprop="datePublished">2019-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Rsync
+    </h1>
+  
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-            <!-- Tags and categories -->
-           
-
-            <!-- Gallery -->
-            
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>环境<br>操作系统：CentOS 7u3<br>源服务器：192.168.179.128<br>目标服务器：192.168.179.129<br>目的：把目标服务器上/home_test目录实时同步到源服务器的/home_test下<br>注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容</p>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境<br>操作系统：CentOS 7u3<br>源服务器：192.168.179.128<br>目标服务器：192.168.179.129<br>目的：把目标服务器上/home_test目录实时同步到源服务器的/home_test下<br>注意：配置相关端⼝和安全规则。源服务器去同步目标服务器上的内容</p>
 <h2 id="192-168-179-128-源服务器"><a href="#192-168-179-128-源服务器" class="headerlink" title="192.168.179.128(源服务器)"></a>192.168.179.128(源服务器)</h2><h3 id="一、-安装rsync"><a href="#一、-安装rsync" class="headerlink" title="一、 安装rsync"></a>一、 安装rsync</h3><p>rhel7:<br>yum install rsync<br>systemctl start rsyncd<br>rhel6:<br>yum install rsync xinetd<br>vi /etc/xinetd.d/rsync<br>disable = no<br>/etc/init.d/xinetd start<br>注意：6里面rsync依据超级守护进程启动</p>
 <h3 id="二、创建rsyncd-conf配置文件"><a href="#二、创建rsyncd-conf配置文件" class="headerlink" title="二、创建rsyncd.conf配置文件"></a>二、创建rsyncd.conf配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">log file = /var/log/rsyncd.log</span><br><span class="line">pidfile = /var/run/rsyncd.pid</span><br><span class="line">lock file = /var/run/rsync.lock</span><br><span class="line">secrets file = /etc/rsync.pass</span><br><span class="line">motd file = /etc/rsyncd.Motd</span><br><span class="line">[home_test]</span><br><span class="line">path = /home_test</span><br><span class="line">comment = home_test</span><br><span class="line">uid = root</span><br><span class="line">gid = root</span><br><span class="line">port = 873</span><br><span class="line">use chroot = no</span><br><span class="line">read only = no</span><br><span class="line">list = no</span><br><span class="line">max connections = 200</span><br><span class="line">timeout = 600</span><br><span class="line">auth users = user1</span><br><span class="line">hosts allow = 192.168.75.152</span><br><span class="line">hosts deny = 192.168.245.150</span><br></pre></td></tr></table></figure>
 
@@ -253,76 +142,124 @@
 <p>问题一：<br>@ERROR: auth failed on module bachup<br>rsync error: error starting client-server protocol (code 5) at<br>main.c(1522) [receiver=3.0.3]<br>原因：服务器端该模块（backup）需要验证⽤户名密码，但客户端没<br>有提供正确的用户名密码，认证失败。 提供正确的用户名密码解决此<br>问题。<br>这个问题比较蠢，如果可能你和我⼀样明明在模块里写了密码文件，<br>怎么都不通，这个时候我劝你先检查一下所写模块中是不是和下图一<br>样。比如，某处多了个s。</p>
 <p>问题二：110错误 -time out<br>rsync: failed to connect to 203.100.192.66: Connection timed out<br>(110)<br>rsync error: error in socket IO (code 10) at clientserver.c(124)<br>[receiver=3.0.5]<br>原因：<br>检查服务器的端口netstat –tunlp，远程telnet测试。 可能因为客户端<br>或者服务端的防火墙开启 导致无法通信，可以设置规则放行rsync（873端口） 或者直接关闭防⽕墙。<br>在这里博主是重启过服务器，然后就报110了，直接开启rsync服务就<br>行。<br>命令：service rsyncd start<br>问题三：113错误 -防火墙<br>rsync: failed to connect to 218.107.243.2: No route to host (113) rsync<br>error: error in socket IO (code 10) at clientserver.c(104)<br>[receiver=2.6.9]<br>原因：<br>防火墙问题导致，这个很简单，关闭防火墙就可以。不过博主还是被<br>困在这里几个小时，因为linux防火墙分两种：<br>-iptable和-firewall<br>认识到这个问题首先查看系统的防火墙种类，查看防火墙状态即可<br>service iptable status<br>firewall-cmd –state<br>确定防火墙种类后再按对应方法将防火墙关闭即可。<br>问题四：1516错误<br>@ERROR: auth failed on module backup<br>rsync error: error starting client-server protocol (code 5) at<br>main.c(1516) [Receiver=3.0.9]<br>解决：这个问题错误差别很大，可查看系统日志查看错误，再搜索解<br>决方法。<br>注意：一般这种情况都建立在可以连通的基础。去服务端查看系统日<br>志，可以查看相关错误。<br>命令：cat /var/log/massages<br>cat /var/log/rsyncd.log</p>
 
-
-                
-            </div>
-
-            <!-- Comments -->
-            
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    
-
-
-                </div>
-            
-        </div>
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://www.jpjp123.top/2019/10/26/rsync/" data-id="ck27pte5d000079kw3rxf4lxf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/26/redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Redis
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-    <!-- Footer -->
-    <hr />
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-
-                    
-
-                    
-                        <li>
-                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-                </ul>
-                <p class="copyright text-muted">&copy; 2019 Jian<br></p>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-    <!-- After footer scripts -->
+</section>
+        
+          <aside id="sidebar">
+  
     
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+    
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
 
-<!-- Disqus Comments -->
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/26/raid/">RAID</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/redis/">Redis</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/rsync/">Rsync</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/http/">Http</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jian<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
 
 
 
+  </div>
 </body>
-
 </html>
