@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.senzi.top/"/>
-  <updated>2019-10-19T08:27:11.000Z</updated>
+  <updated>2019-10-31T10:00:36.219Z</updated>
   <id>http://www.senzi.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos</title>
+    <link href="http://www.senzi.top/2019/10/31/centos/"/>
+    <id>http://www.senzi.top/2019/10/31/centos/</id>
+    <published>2019-10-31T10:00:36.557Z</published>
+    <updated>2019-10-31T10:00:36.219Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Centos下搭建Hexo-github-域名&quot;&gt;&lt;a href=&quot;#Centos下搭建Hexo-github-域名&quot; class=&quot;headerlink&quot; title=&quot;Centos下搭建Hexo+github+域名&quot;&gt;&lt;/a&gt;Centos下搭建Hexo+github+域名&lt;/h2&gt;&lt;h4 id=&quot;1-安装Node-js&quot;&gt;&lt;a href=&quot;#1-安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;1.安装Node.js&quot;&gt;&lt;/a&gt;1.安装Node.js&lt;/h4&gt;&lt;p&gt;   1.下载&lt;/p&gt;
+   &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget https://nodejs.org/dist/v9.3.0/node-v9.3.0-linux-x64.tar.xz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;   2.解压&lt;/p&gt;
+   &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;tar -xvJf node-v9.3.0-linux-x64.tar.xz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;文件就被解压到当前文件夹下了，然后移动&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv  node-v9.3.0-linux-x64  node&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv  node  /usr/local/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Http</title>
