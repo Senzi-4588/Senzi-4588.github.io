@@ -4,10 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RAID, Jian Blog">
-    <meta name="description" content="磁盘阵列RAIDRAID：磁盘冗余阵列（Redundant Array of Independent Disks）作 用：容错、提升读写速率
-优点：
-1、提高传输速率：raid通过在多个磁盘上同时存储和读取数据来大幅度提高存储系统的数据吞吐">
+    <meta name="keywords" content="car, Jian Blog">
+    <meta name="description" content="
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>RAID | Jian Blog</title>
+    <title>car | Jian Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,13 +305,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        RAID
+                        car
                     </div>
                 </div>
             </div>
@@ -435,14 +434,9 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-26
+                    2019-10-31
                 </div>
                 
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-10-21
-                </div>
                 
 
                 
@@ -458,31 +452,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="磁盘阵列RAID"><a href="#磁盘阵列RAID" class="headerlink" title="磁盘阵列RAID"></a>磁盘阵列RAID</h3><p>RAID：磁盘冗余阵列（Redundant Array of Independent Disks）<br>作 用：容错、提升读写速率</p>
-<p>优点：</p>
-<p>1、提高传输速率：raid通过在多个磁盘上同时存储和读取数据来大幅度提高存储系统的数据吞吐量。</p>
-<p>2、通过数据校验提供容错功能：在很多raid模式中有都有较为完备的相互校验、恢复的措施，大大提高了raid系统的容错度，提高了系统稳定的冗余性。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">RAID类型                     个数                	利用率           优缺点</span><br><span class="line">－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</span><br><span class="line">RAID0   条带集   	       	   2＋             100%          	  读写速率最快，不容错</span><br><span class="line">RAID1   镜像集                2			   50%	         	   读写速率一般，容错</span><br><span class="line">RAID5   带奇偶校验条带集   		3＋             (n-1）/n      	  读写速率快，容错，允许坏一块</span><br><span class="line">RAID6   带奇偶校验条带集双校验dp 4＋             (n-2）/n      		读写快，容错，允许坏两块</span><br><span class="line">RAID10 RAID1的安全＋RAID0的高速 4				50%					读写速率快，容错</span><br><span class="line">－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</span><br></pre></td></tr></table></figure>
-
-<p>RAID 0（条带集）</p>
-<p>最早的raid模式，两块以上的磁盘，实现的成本最低，读写速率最快，可以提高整个磁盘的性能和吞吐量。但是没有提供冗余或错误修复的能力，如果出现故障，无法进行任何补救，只有在对数据安全性不高的情况下才会使用。</p>
-<p>把连续的数据依次分散写入各块盘中，整倍提高磁盘容量</p>
-<p><img src="https://i.loli.net/2019/07/29/5d3e63da18de144158.png" alt=""></p>
-<p>RAID 1(镜像集)</p>
-<p>通过二次读写实现磁盘镜像，在数据写入一块磁盘时，同时会在另一块磁盘上生成镜像文件（把一个磁盘上的数据镜像到另一个磁盘上），有很好的磁盘冗余性，但成本高，磁盘利用率只有50%，不断地读写，对磁盘控制器的负载很大。</p>
-<p><img src="https://i.loli.net/2019/07/29/5d3e63ea4fb6759224.png" alt=""></p>
-<p>RAID 5（奇偶条带校验集）</p>
-<p>是一种兼顾存储性能、数据安全、存储成本的存储方案，奇偶校验码存在于所有磁盘上，三块以上的磁盘，读取数据的速度很快，但写入一般，当一块磁盘数据损坏，利用剩下的数据和相对应的奇偶校验信息去恢复被损坏的数据。（允许怀掉一块盘）</p>
-<p><img src="https://i.loli.net/2019/07/29/5d3e64001b3cd77708.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A值		B值		Xor结果</span><br><span class="line">0		0			0</span><br><span class="line">1		0			1</span><br><span class="line">0		1			1</span><br><span class="line">1		1			0</span><br></pre></td></tr></table></figure>
-
-<p>RAID 6（奇偶条带校验集双校验）</p>
-<p>是RAID5的扩展，将校验码写入两个驱动器中，增强磁盘容错能力，用于数据绝对不能出错的场合，需要四块以上的磁盘，对控制器的设计年的十分复杂，写入速度一般，用于计算奇偶校验值和验证数据的正确性所花费的时间多，会造成不必要的负载，一般只有军队用的得起。（允许坏掉两块盘）</p>
-<p><img src="https://i.loli.net/2019/07/29/5d3e640db819992855.png" alt=""></p>
-<p>RAID 10</p>
-<p>raid0+1，raid0的高速+raid1的安全，除了数据可以依次导入磁盘，其每个盘都有自己的物理镜像盘，提供全冗余能力，读写速度快，但成本高，至少需要四个磁盘，磁盘利用率50%。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">一、不同场景RAID的使用</span><br><span class="line">RAID 实现方式</span><br><span class="line">硬RAID： 需要RAID卡，有自己的CPU，处理速度快，有电池和无电池</span><br><span class="line">软RAID：	 通过操作系统实现，比如Windows、Linux</span><br><span class="line"></span><br><span class="line">二、RAID5 (3块硬盘) + 热备(1块硬盘)</span><br><span class="line">1. 准备4块硬盘</span><br><span class="line">[root@tianyun ~]# ll /dev/sd*</span><br><span class="line">brw-rw---- 1 root disk 8,  48 Jan 13 16:07 /dev/sdd</span><br><span class="line">brw-rw---- 1 root disk 8,  64 Jan 13 16:07 /dev/sde</span><br><span class="line">brw-rw---- 1 root disk 8,  80 Jan 13 16:07 /dev/sdf</span><br><span class="line">brw-rw---- 1 root disk 8,  80 Jan 13 16:07 /dev/sdg</span><br><span class="line">   </span><br><span class="line">2. 创建RAID</span><br><span class="line">[root@tianyun ~]# yum -y install mdadm  		    //确保mdadm命令可用</span><br><span class="line">[root@tianyun ~]# mdadm -C /dev/md0 -l5 -n3 -x1 /dev/sd&#123;d,e,f,g&#125;</span><br><span class="line">mdadm: array /dev/md0 started.</span><br><span class="line">-C					创建RAID</span><br><span class="line">/dev/md0		第一个RAID设备</span><br><span class="line">-l5 				RAID5</span><br><span class="line">-n3					RAID成员的数量</span><br><span class="line">-x1					热备磁盘的数量</span><br><span class="line"></span><br><span class="line">3. 格式化，挂载</span><br><span class="line">[root@tianyun ~]# mkfs.xfs /dev/md0</span><br><span class="line">[root@tianyun ~]# mkdir /mnt/raid5</span><br><span class="line">[root@tianyun ~]# mount /dev/md0 /mnt/raid5</span><br><span class="line">[root@tianyun ~]# cp -rf /etc /mnt/raid5/etc1</span><br><span class="line"></span><br><span class="line">4. 查看RAID信息</span><br><span class="line">[root@tianyun ~]# mdadm -D /dev/md0     			//-D 查看详细信息</span><br><span class="line">/dev/md0:</span><br><span class="line">        Version : 1.2</span><br><span class="line">  Creation Time : Mon Jan 13 16:28:47 2014</span><br><span class="line">     Raid Level : raid5</span><br><span class="line">     Array Size : 2095104 (2046.34 MiB 2145.39 MB)</span><br><span class="line">  Used Dev Size : 1047552 (1023.17 MiB 1072.69 MB)</span><br><span class="line">   Raid Devices : 3</span><br><span class="line">  Total Devices : 4</span><br><span class="line">    Persistence : Superblock is persistent</span><br><span class="line"></span><br><span class="line">    Update Time : Mon Jan 13 16:34:51 2014</span><br><span class="line">          State : clean </span><br><span class="line"> Active Devices : 3</span><br><span class="line">Working Devices : 4</span><br><span class="line"> Failed Devices : 0</span><br><span class="line">  Spare Devices : 1</span><br><span class="line"></span><br><span class="line">         Layout : left-symmetric</span><br><span class="line">     Chunk Size : 512K</span><br><span class="line">    Number   Major   Minor   RaidDevice State</span><br><span class="line">       0       8       48        0      active sync   /dev/sdd</span><br><span class="line">       1       8       64        1      active sync   /dev/sde</span><br><span class="line">       4       8       80        2      active sync   /dev/sdf</span><br><span class="line"></span><br><span class="line">       3       8       96        -      spare   /dev/sdg</span><br><span class="line"></span><br><span class="line">5. 模拟一块硬盘损坏，并移除</span><br><span class="line">终端一：</span><br><span class="line">[root@tianyun ~]# watch -n 0.5 &apos;mdadm -D /dev/md0 | tail&apos;  	//watch持续查看</span><br><span class="line">终端二：</span><br><span class="line">[root@tianyun ~]# mdadm /dev/md0 -f /dev/sde -r /dev/sde  </span><br><span class="line">//模拟坏了并移除  -f  --fail  -r  --remove</span><br><span class="line"></span><br><span class="line">6. 设置RAID开机生效</span><br><span class="line">[root@tianyun ~]# mdadm -D -s</span><br><span class="line">ARRAY /dev/md0 metadata=1.2 name=sxl1.com:0 UUID=c6761621:8878498f:f5be209e</span><br><span class="line">[root@tianyun ~]# mdadm -D -s &gt; /etc/mdadm.conf</span><br><span class="line"></span><br><span class="line">========================================================</span><br><span class="line">mdadm选项：</span><br><span class="line">-s  --scan</span><br><span class="line">-S  --stop</span><br><span class="line">-D  --detail</span><br><span class="line">-C  --create</span><br><span class="line">-f   --fail</span><br><span class="line">-r   --remove</span><br><span class="line">-n  --raid-devices=3</span><br><span class="line">-x  --spare-devices=1</span><br><span class="line">-l   --level=5</span><br><span class="line"></span><br><span class="line">========================================================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">参考：</span><br><span class="line">    Update Time : Mon Aug  4 22:47:47 2014</span><br><span class="line">          State : clean, degraded, recovering</span><br><span class="line"> Active Devices : 2</span><br><span class="line">Working Devices : 3</span><br><span class="line"> Failed Devices : 0</span><br><span class="line">  Spare Devices : 1</span><br><span class="line"></span><br><span class="line">         Layout : left-symmetric</span><br><span class="line">     Chunk Size : 512K</span><br><span class="line"></span><br><span class="line"> Rebuild Status : 3% complete</span><br><span class="line"></span><br><span class="line">           Name : localhost.localdomain:0  (local to host localhost.localdomain)</span><br><span class="line">           UUID : 3df9624c:138a5b3e:2f557132:59a43d04</span><br><span class="line">         Events : 41</span><br></pre></td></tr></table></figure>
-
+                <p><img src="https://i.loli.net/2019/10/31/R42OhUzxiS3NYsn.jpg" alt=""></p>
 
             </div>
             <hr/>
@@ -508,7 +478,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.jpjp123.top/2019/10/26/raid/">http://www.jpjp123.top/2019/10/26/raid/</a>
+                    <a href="http://www.jpjp123.top/2019/10/31/car/">http://www.jpjp123.top/2019/10/31/car/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,9 +680,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/10/31/car/">
                     <div class="card-image">
@@ -731,9 +702,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -742,6 +713,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -752,20 +724,21 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/26/redis/">
+                <a href="/2019/10/26/raid/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Redis">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="RAID">
                         
-                        <span class="card-title">Redis</span>
+                        <span class="card-title">RAID</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            redis
-redis简介123456789101112131415161718192021什么是redisREmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-valu
+                            磁盘阵列RAIDRAID：磁盘冗余阵列（Redundant Array of Independent Disks）作 用：容错、提升读写速率
+优点：
+1、提高传输速率：raid通过在多个磁盘上同时存储和读取数据来大幅度提高存储系统的数据吞吐
                         
                     </div>
                     <div class="publish-info">
